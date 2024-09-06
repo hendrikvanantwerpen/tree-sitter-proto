@@ -6,8 +6,9 @@
   "types": "bindings/node",
   "scripts": {
     "install": "node-gyp-build",
-    "prestart": "tree-sitter build --wasm",
-    "start": "tree-sitter playground",
+    "build": "npx tree-sitter-cli generate --no-bindings",
+    "prestart": "npx tree-sitter-cli build --wasm",
+    "start": "npx tree-sitter-cli playground",
     "test": "node --test bindings/node/*_test.js"
   },
   "keywords": [
@@ -29,7 +30,7 @@
     "node-gyp-build": "^4.8.0"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.23.0"
+    "tree-sitter": "^0.21.0"
   },
   "peerDependenciesMeta": {
     "tree_sitter": {
