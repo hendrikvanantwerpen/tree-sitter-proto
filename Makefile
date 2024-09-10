@@ -15,7 +15,7 @@ ifeq ($(shell echo $(PARSER_URL) | grep '^[a-z][-+.0-9a-z]*://'),)
 endif
 endif
 
-TS ?= npx tree-sitter-cli
+TS ?= tree-sitter
 
 # ABI versioning
 SONAME_MAJOR := $(word 1,$(subst ., ,$(VERSION)))
